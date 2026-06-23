@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMusicPlayer();
   initFloatingHearts();
   initManifestations();
+  initLightbox();
 });
 
 /* ──────────── HERO SLIDESHOW ──────────── */
@@ -289,3 +290,33 @@ function initManifestations() {
   });
 }
 
+/* ──────────── LIGHTBOX ──────────── */
+function initLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('lightboxClose');
+  const memoryImages = document.querySelectorAll('.memory-img-wrap img');
+
+  memoryImages.forEach((img) => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove('active');
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      lightbox.classList.remove('active');
+    }
+  });
+}
