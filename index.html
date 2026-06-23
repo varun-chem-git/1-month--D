@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy One Month, Pearl 💕</title>
+  <meta name="description" content="A love letter in pixels — Happy 1 Month Anniversary, Pearl!" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ======== MUSIC PLAYER BAR ======== -->
+  <div class="music-bar" id="musicBar">
+    <button class="music-toggle" id="musicToggle" aria-label="Play / Pause music">
+      <span class="music-icon" id="musicIcon">♫</span>
+    </button>
+    <span class="music-label" id="musicLabel">Taylor Swift — Click to play 🎶</span>
+  </div>
+  <!-- Hidden YouTube player -->
+  <div id="ytPlayerWrap" style="position:fixed;top:-9999px;left:-9999px;width:1px;height:1px;overflow:hidden;">
+    <div id="ytPlayer"></div>
+  </div>
+
+  <!-- ======== FLOATING HEARTS CANVAS ======== -->
+  <canvas id="heartsCanvas"></canvas>
+
+  <!-- ======== NAV ======== -->
+  <nav class="nav" id="mainNav">
+    <a href="#hero" class="nav-link active">Home</a>
+    <a href="#memories" class="nav-link">Memories</a>
+    <a href="#manifestations" class="nav-link">Manifestations</a>
+  </nav>
+
+  <!-- ═══════════════════════  HERO  ═══════════════════════ -->
+  <section class="hero" id="hero">
+    <!-- Slideshow background -->
+    <div class="hero-slideshow" id="heroSlideshow">
+      <!--
+        ⬇️  ADD YOUR FRONT-PAGE PHOTOS HERE  ⬇️
+        Replace the src values with your actual image paths/filenames.
+        Add or remove <div class="slide"> blocks as needed.
+      -->
+      <div class="slide active" style="background-image:url('photos/hero1.jpeg')"></div>
+      <div class="slide" style="background-image:url('photos/hero2.jpeg')"></div>
+      <div class="slide" style="background-image:url('photos/hero3.jpeg')"></div>
+      <div class="slide" style="background-image:url('photos/hero4.jpeg')"></div>
+      <div class="slide" style="background-image:url('photos/hero5.jpeg')"></div>
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content reveal">
+      <p class="hero-sub">✦ celebrating us ✦</p>
+      <h1 class="hero-title">
+        Happy one month with the<br />
+        <span class="highlight">prettiest girl</span><br />
+        on the face of this earth
+      </h1>
+
+      <div class="hero-divider">💕</div>
+
+      <!-- ⬇️  PASTE YOUR POEM HERE  ⬇️ -->
+      <div class="poem-card">
+        <p class="poem-text">
+          <em>One random day where we started talking,<br />
+          Sharing poems, thoughts and what not,<br />
+          Our chats were like 2 little hearts pouring,<br />
+          Pouring? Pouring into each other like 2 rivers pour into the sea,<br />
+          They merge and become a part of each other,<br />
+          Stuck with each other, yet they feel so free,<br />
+          The last month has been as cheerful as a sunset after a gloomy day,<br />
+          I so hope it stays forever and we keep breezing through everything,<br />
+          out of everything, we always sway…</em>
+        </p>
+      </div>
+
+      <a href="#memories" class="scroll-cta">
+        <span>Scroll down</span>
+        <span class="arrow-down">⌄</span>
+      </a>
+    </div>
+  </section>
+
+
+
+  <!-- ═══════════════════════  MEMORIES  ═══════════════════════ -->
+  <section class="section memories-section" id="memories">
+    <div class="section-header reveal">
+      <span class="section-tag">01</span>
+      <h2 class="section-title">Memories</h2>
+      <p class="section-subtitle">Moments I never want to forget</p>
+    </div>
+
+    <div class="memories-timeline">
+      <!--
+        ⬇️  ADD YOUR MEMORY PHOTOS + CAPTIONS HERE  ⬇️
+        Add/remove .memory-card blocks as you like.
+      -->
+      <div class="memory-card reveal">
+        <div class="memory-img-wrap">
+          <img src="photos/memory1.jpg" alt="Memory" loading="lazy" />
+        </div>
+        <div class="memory-caption">
+          <h3>I Fell</h3>
+        </div>
+      </div>
+
+      <div class="memory-card reverse reveal">
+        <div class="memory-img-wrap">
+          <img src="photos/memory2.jpeg" alt="Memory" loading="lazy" />
+        </div>
+        <div class="memory-caption">
+          <h3>A Silly Question</h3>
+          <p>Where it all started ✨</p>
+        </div>
+      </div>
+
+      <div class="memory-card reveal">
+        <div class="memory-img-wrap">
+          <img src="photos/memory3.jpg" alt="Memory" loading="lazy" />
+        </div>
+        <div class="memory-caption">
+          <h3>You Being Quirky</h3>
+        </div>
+      </div>
+
+      <div class="memory-card reverse reveal">
+        <div class="memory-img-wrap">
+          <img src="photos/memory4.jpeg" alt="Memory" loading="lazy" />
+        </div>
+        <div class="memory-caption">
+          <h3>"I Love You"</h3>
+          <p>When you said it for the first time 💕</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════  MANIFESTATIONS  ═══════════════════════ -->
+  <section class="section manifestations-section" id="manifestations">
+    <div class="section-header reveal">
+      <span class="section-tag">02</span>
+      <h2 class="section-title">Manifestations</h2>
+      <p class="section-subtitle">Everything I'm putting out into the universe for us</p>
+    </div>
+
+    <div class="manifest-interactive" id="manifestInteractive">
+      <div class="manifest-prompt" id="manifestPrompt">
+        <span class="prompt-pulse">⏎</span>
+        Press <kbd>Enter</kbd> or <span class="tap-hint">Tap here</span> to reveal
+      </div>
+
+      <div class="manifest-list" id="manifestList">
+        <div class="manifest-item" data-icon="🐉">Watch How to Train Your Dragon <span class="manifest-note">(First myself, then together)</span></div>
+        <div class="manifest-item" data-icon="😃">Being possessive 😃✌️ about eo</div>
+        <div class="manifest-item" data-icon="🧸">Replacing the damn plushie</div>
+        <div class="manifest-item" data-icon="🏍️">Go on that bike ride</div>
+        <div class="manifest-item" data-icon="🧎">Get down on my knees <span class="manifest-note">⇒ Followed by falling flat on my face</span></div>
+        <div class="manifest-item" data-icon="🎁">Birthday Gift <span class="manifest-note">(hoodie and kinder joy)</span></div>
+        <div class="manifest-item" data-icon="🎲">Losing the bet</div>
+        <div class="manifest-item" data-icon="🫣">Don't be shy IRL <span class="manifest-note">(this scares the shit out of me but ok)</span></div>
+        <div class="manifest-item" data-icon="💋">Making out in the kitchen</div>
+        <div class="manifest-item" data-icon="💪">Going to the gym <span class="manifest-note">(Gotta give you the view of a lifetime)</span></div>
+        <div class="manifest-item" data-icon="🎵">Hard launching you on the title track of "Pal Pal Dil ke Paas"</div>
+        <div class="manifest-item" data-icon="🍜">Cook maggi for ya</div>
+        <div class="manifest-item" data-icon="😴">Sleeping in your lap <span class="manifest-note">(dozing off while talking to you to be precise)</span></div>
+        <div class="manifest-item manifest-finale" data-icon="💕">…and a lot more 💗</div>
+      </div>
+
+      <div class="manifest-counter" id="manifestCounter"></div>
+
+      <!-- Intimate subsection — revealed after all manifestations -->
+      <div class="intimate-section" id="intimateSection">
+        <button class="intimate-trigger" id="intimateTrigger">
+          <span>🔥</span> One more thing… <span>🔥</span>
+        </button>
+
+        <div class="intimate-cards" id="intimateCards">
+          <div class="intimate-card">
+            <h3 class="intimate-heading">What I would wanna do to you 💋</h3>
+            <p>Honestly just kiss you everywhere that I can possibly reach and then lick you — pehle toh face because that's your personal request — all while sitting in your lap. And then I'd probably just bite you on your neck or your collarbone and then travel down… I'll just give wet kisses on your chest right while looking at you.</p>
+          </div>
+
+          <div class="intimate-card">
+            <h3 class="intimate-heading">What I would want you to do to me 🫠</h3>
+            <p>Sit in my lap staring into my eyes while you play with my hair and tell me to be a good boy… while you tickle my waist midway and maybe kiss my thighs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════  FOOTER  ═══════════════════════ -->
+  <footer class="footer">
+    <div class="footer-hearts">💗💗💗</div>
+    <p class="footer-text">Love ya Pearl <span class="wink">;)</span></p>
+    <p class="footer-sub">Made with all my heart &nbsp;♡</p>
+  </footer>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+</html>
